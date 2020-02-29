@@ -1,0 +1,7 @@
+Procedural programming vs Functional programming
+Imperative programming vs Declarative programming 
+Structured programming vs Unstructured programming
+
+Object-Oriented Programming
+
+Generic Programming 

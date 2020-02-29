@@ -1,0 +1,46 @@
+// constants for dialog box
+#define ID_OK	                                       3000
+#define IDC_STATIC                                     3001
+#define IDC_EXIT                                       3002
+#define DS_CENTER           0x0800L
+#define DS_CENTER           0x0800L
+#define WS_MINIMIZEBOX      0x00020000L
+#define WS_SYSMENU          0x00080000L
+#define WS_VISIBLE          0x10000000L
+#define WS_OVERLAPPED       0x00000000L
+#define DS_MODALFRAME       0x80L
+#define DS_3DLOOK           0x0004L
+#define WS_CAPTION          0xC00000L
+#define ES_AUTOHSCROLL      0x80L
+#define ES_LEFT             0
+
+// Constants for menu
+#define IDM_OPEN 1
+#define IDM_SAVEAS 2
+#define IDM_EXIT 3
+#define IDM_ABOUT 4
+
+FirstMenu MENU
+{
+ POPUP "&File"
+        {
+         MENUITEM "&Open",IDM_OPEN
+         MENUITEM "Save &As",IDM_SAVEAS
+         MENUITEM SEPARATOR
+         MENUITEM "E&xit",IDM_EXIT
+        }
+ POPUP "&Help"
+        {
+         MENUITEM "&About",IDM_ABOUT
+        }
+}
+
+
+MYDIALOG DIALOG DISCARDABLE  10, 10, 209, 89
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_OK,78,58,52,13
+    LTEXT           "Hello World!",IDC_STATIC,84,14,40,8
+END
